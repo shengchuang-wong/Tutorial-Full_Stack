@@ -1,0 +1,29 @@
+<p>1) .val() value of</p>
+<p>2) .text() pure text of</p>
+<p>3) .attr() attribute value</p>
+<p>4) .html() html</p>
+<p>5) .addClass() add class</p>
+<p>6) .removeClass() remove class</p>
+<p>7) .toggleClass() toggle class</p>
+<p>8) .click() onclick</p>
+<p>9) .keypress() key press (try to click Enter)</p>
+<p>10) .on() << click text</p>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$("body").keypress(function(event) {
+		if(event.which === 13) {
+			alert("YOU HIT ENTER!");
+		}
+	});
+
+	$("p").on("click", function() {
+		$("body").css("transition", "2s ease-in-out");
+		$("body").css("background-color", "black");
+		$(this).css("color", "white");
+	});
+</script>

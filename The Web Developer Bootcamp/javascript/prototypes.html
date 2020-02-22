@@ -1,0 +1,15 @@
+<script type="text/javascript">
+	function Person(name) {
+		this.name = name;
+		Person.prototype.isInstructor = "true";
+	}
+
+	console.log("Person's prototype: " + Person.prototype);
+
+	var elie = new Person("Elie");
+	var colt = new Person("Colt");
+
+	console.log("Person's prototype: " + Person.prototype);
+	console.log(elie.__proto__ === Person.prototype);
+	console.log("Is Instructor? " + elie.isInstructor);
+</script>

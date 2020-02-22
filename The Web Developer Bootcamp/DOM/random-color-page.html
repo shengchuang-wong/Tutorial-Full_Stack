@@ -1,0 +1,24 @@
+
+<style type="text/css">
+	#click-me {
+		text-align: center;
+	}
+</style>
+
+<button id="click-me">click me</button>
+
+<script type="text/javascript">
+	function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+	document.getElementById("click-me").addEventListener("click", function() {
+		document.querySelector("body").style.background = getRandomColor();
+	});
+
+</script>

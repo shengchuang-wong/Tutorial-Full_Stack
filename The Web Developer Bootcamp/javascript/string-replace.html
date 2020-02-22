@@ -1,0 +1,14 @@
+<script type="text/javascript">
+	
+// str.replace does not replace the string, so have to assign to other variable to commit the changes. Example:
+
+	function replace_string(str) {
+		var newStr = str.replace(/-/g, "_");
+		return newStr;
+	}
+
+	var userInput = prompt("Enter a sentence, and the system will convert '-' into '_'");
+
+	alert("Original: " + userInput + "\nResults: " + replace_string(userInput));
+
+</script>

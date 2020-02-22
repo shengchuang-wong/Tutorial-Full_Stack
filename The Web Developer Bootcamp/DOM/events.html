@@ -1,0 +1,20 @@
+
+
+<p id = "alert-message">1. Click me for alert message</p>
+<p>2. </p>
+<p>3. </p>
+<p>4. </p>
+<p>5. </p>
+<p>6. </p>
+<p>7. </p>
+<p>8. </p>
+
+<script type="text/javascript">
+	var alertMessage = document.getElementById("alert-message");
+
+	// mouseover, mouseout
+	alertMessage.addEventListener("click", function() {
+		alert(alertMessage.textContent);
+		alertMessage.innerHTML = "1. <strong>Thanks for clicking me :)</strong>";
+	})
+</script>

@@ -1,0 +1,32 @@
+<style type="text/css">
+	body {
+		transition: 2s ease-in-out;
+	}
+</style>
+
+
+<p>Note that getElementBy... perform faster than querySelector
+<br>document.getElementById()
+<br>document.querySelector()
+</p>
+
+var h1 = xxx;
+
+<p>1. h1.style.color = "pink";
+<br>     whereby in jquery
+<br>  h1.css("color", "pink");
+</p>
+
+<script type="text/javascript">
+	var body = document.querySelector("body");
+	var isBlue = false;
+
+	setInterval(function() {
+		if (isBlue) {
+			body.style.background = "lightgreen";
+		} else {
+			body.style.background = "lightblue";
+		}
+		isBlue = !isBlue;
+	}, 2000);
+</script>
