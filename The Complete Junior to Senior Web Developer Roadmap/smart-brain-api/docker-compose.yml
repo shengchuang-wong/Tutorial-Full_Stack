@@ -1,0 +1,30 @@
+version: '3.6'
+
+services:
+
+  # Backend API
+  smart-brain-api:
+    container_name: backend
+    # image: node:carbon
+    build: ./
+    command: npm start
+    working_dir: /usr/src/smart-brain-api
+    environment:
+      PO_URL: postgres://imlcbmqe:JDcp4sD4I85Rz3d36jScxIZwBJxldbV7@baasu.db.elephantsql.com:5432/imlcbmqe
+    links:
+      - postgres
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/smart-brain-api
+
+  # Postgres
+  postgres:
+    environment:
+      PO_USER: imlcbmqe
+      PO_PASSWORD: JDcp4sD4I85Rz3d36jScxIZwBJxldbV7
+      PO_DB: imlcbmqe
+      PO_HOST: baasu.db.elephantsql.com
+    image: postgres
+    ports:
+      - "5432:5432"
