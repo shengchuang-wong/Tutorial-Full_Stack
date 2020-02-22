@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Async Fetch</title>
+</head>
+<body>
+	
+	<script>
+		var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+
+		fetch(url)
+		.then(function(response) {
+			handleErrors(response);
+			console.log(response);
+			return response.json();
+		})
+		.then(function(data) {
+			console.log(data.bpi.EUR.rate);
+		})
+		.catch(function() {
+			console.log('problem');
+		})
+
+		function handleErrors(request) {
+			if(!request.ok) {
+				throw Error(request.status);
+			}
+			return request;
+		}
+
+		// Fetch Options
+		// fetch(url, {
+		// 	method: 'POST',
+		// 	body: JSON.stringify({
+		// 		name: 'blue',
+		// 		login: 'bluecat'
+		// 	})
+		// })
+	</script>
+</body>
+</html>

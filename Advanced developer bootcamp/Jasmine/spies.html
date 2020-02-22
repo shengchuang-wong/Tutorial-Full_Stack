@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jasmine Tests</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/jasmine.css">
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/jasmine.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/jasmine-html.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/boot.js"></script>
+
+  <script>
+
+  	// Spies, call the method but does not affect the real system
+
+  	function add(a, b, c) {
+  		return a + b  + c;
+  	}
+
+  	describe('add_', function() {
+  		var addSpy, result;
+
+  		beforeEach(function() {
+  			addSpy = spyOn(window, 'add');
+  			result = addSpy(1, 2, 3);
+  		})
+  		it('is can have params tested', function() {
+  			expect(addSpy).toHaveBeenCalled();
+  			expect(addSpy).toHaveBeenCalledWith(1,2,3);
+  		});
+  	})
+
+  	describe('add', function() {
+  		var addSpy, result;
+
+  		beforeEach(function() {
+  			addSpy = spyOn(window, 'add').and.callThrough();
+  			result = addSpy(1, 2, 3);
+  		})
+  		it('is can have params tested', function() {
+  			expect(addSpy).toHaveBeenCalled();
+  			expect(addSpy).toHaveBeenCalledWith(1,2,3);
+  			expect(result).toEqual(6);
+  		});
+  	})
+
+  	describe('add_with_count', function() {
+  		var addSpy, result;
+
+  		beforeEach(function() {
+  			addSpy = spyOn(window, 'add').and.callThrough();
+  			result = addSpy(1, 2, 3);
+  		})
+  		it('is can have params tested', function() {
+  			expect(addSpy.calls.any()).toBe(true);
+  			expect(addSpy.calls.count()).toBe(1);
+  			expect(result).toEqual(6);
+  		});
+  	})
+  </script>
+</body>
+</html>

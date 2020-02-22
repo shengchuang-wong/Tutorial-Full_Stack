@@ -1,0 +1,10 @@
+TDD - Test Driven Development
+=============================
+
+Steps
+-----
+1. Write the tests
+2. See the tests fail
+3. Write code to pass the tests
+4. Refactor code as necessary
+5. Repeat

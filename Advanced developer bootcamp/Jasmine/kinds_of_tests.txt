@@ -1,0 +1,4 @@
+1. Unit Testing
+2. Integration Testing
+3. Acceptance Testing
+4. Stress Testing

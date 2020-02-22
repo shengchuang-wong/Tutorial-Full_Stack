@@ -1,0 +1,9 @@
+BDD - Behavior Driven Development
+=================================
+
+Steps
+-----
+- A subset of TDD
+- Not mutually exclusive with TDD
+- Involves being verbose with our style and describing the behavior of the functionality
+- Helpful when testing the deisng of the software

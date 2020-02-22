@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax with Axios</title>
+</head>
+<body>
+	
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		var url = 'https://opentdb.com/api.php?amount=1';
+
+		axios.get(url)
+		.then(function(res) {
+			console.log(res.data.results[0]);
+		})
+		.catch(function(err) {
+			console.log(err);
+		});
+
+		// Async & Await
+		getData();
+
+		async function getData() {
+			try {
+				const res = await axios.get(url);
+				console.log(res.data.results[0]);
+			}	
+			catch(e) {
+				console.log(e);
+			}		
+		}
+
+
+	</script>
+</body>
+</html>

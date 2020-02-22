@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax with jquery</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<br>
+	<button id="btn">Bacon Button</button>
+	
+	<script>
+		$('#btn').click(function() {
+			$.ajax({
+				method: 'GET',
+				url: 'https://baconipsum.com/api/?type=meat-and-filter',
+				dataType: 'json'
+			})
+			.done(function(res) {
+				console.log(res);
+				$('body').prepend(res[0]);
+			})
+			.fail(function(e) {
+				console.warn(e)
+			});
+		});
+
+	</script>
+</body>
+</html>
