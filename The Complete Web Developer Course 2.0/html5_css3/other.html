@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<title>Other</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<script type="text/javascript">
+		document.createElement("container");
+	</script>
+
+    <style type="text/css">
+    	
+    </style>
+    
+  </head>
+  <body>
+
+    <p>1. b tag changed to bold tag for bold text</p>
+
+	<article>
+		<p>2. article is the div for article content (header, footer, article, section, nav, menu <-- put dispaly as block for IE Explore)</p>
+	</article>
+
+	<container>
+		<p>3. self created div element using javascript</p>
+	</container>
+
+	<p>4. figure tag for image caption</p>
+	<p>5. mark tag to highlight the text</p>
+	<p>6. small tag to make the text small</p>
+	<figure>
+		<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS1W0lHe_4U8pF3j7Ij_wxw-qx_N8ww713xOLWwBolGcUbBFvt5" alt="image" data-description="Baby" id="baby">
+		<figcaption>
+			<p><mark>Nature</mark> <small>(Wikipedia)</small></p>
+		</figcaption>
+	</figure>
+
+	<p>7. Input range with min, max, and step option</p>
+	<input type="range" min="0" max="100" step="20">
+
+	<p>8. Make element editable</p>
+	<div contenteditable="true">
+		This is some text inside an editable div
+	</div>
+
+	<ul contenteditable="true">
+		<li>Orange</li>
+	</ul>
+
+	<script type="text/javascript">
+		var data = document.getElementById("baby").getAttribute("data-description");
+		alert("9. own assign data attribute. In this case, a data-description attribute have assigned to the image and alert it out: " + data);
+	</script>
+
+  </body>
+</html>

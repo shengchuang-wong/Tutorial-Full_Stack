@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<title>Canvas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	<style type="text/css">
+		
+		#myCanvas {
+			border: 1px solid grey;
+		}
+
+		#myCanvas1 {
+			border: 1px solid grey;
+		}
+
+	</style>
+
+  </head>
+  <body>
+
+	<canvas id="myCanvas" width="500" height="400">
+		
+	</canvas>
+
+	<canvas id="myCanvas1" width="500" height="400">
+		
+	</canvas>
+
+	<script type="text/javascript">
+		
+		var myCanvas = document.getElementById("myCanvas");
+
+		// specify whether 2d or 3d
+		var context = myCanvas.getContext("2d");
+
+		// color, gradient or pattern
+		context.fillStyle = "#49C900";
+
+		// draw rectangle (top, left, width, height)
+		context.fillRect(50, 100, 300, 120);
+
+		// specify line from and to
+		context.moveTo(0, 400);
+		context.lineTo(500, 0);
+
+		// line thickness
+		context.lineWidth = 20;
+
+		// line color
+		context.strokeStyle = "#F42924";
+
+		// draw line
+		context.stroke();
+
+		var myCanvas1 = document.getElementById("myCanvas1");
+
+		var context1 = myCanvas1.getContext("2d");
+
+		// create gradient
+		var gradient = context1.createLinearGradient(150, 100, 350, 300);
+		gradient.addColorStop(0, "white");
+		gradient.addColorStop(1, "#49C900");
+
+		context1.fillStyle = gradient;
+		context1.fillRect(150, 100, 200, 200);
+
+		context1.moveTo(150, 100);
+		context1.lineTo(350, 300);
+
+		context1.moveTo(150, 300);
+		context1.lineTo(350, 100);
+
+		context1.strokeStyle = "#F42924";
+		context1.stroke();
+
+		// draw circle
+		context1.beginPath();
+		// coordinate of center of the circle (from left, from top, radius size, draw circle line)
+		context1.arc(100, 100, 50, 0, 2*Math.PI);
+		context1.stroke();
+
+		var textGradient = context1.createLinearGradient(200, 50, 300, 50);
+
+		textGradient.addColorStop(0, "red");
+		textGradient.addColorStop(1, "yellow");
+
+		context1.fillStyle = textGradient;
+
+		// add text
+		context1.font = "20px Arial";
+		context1.fillText("My Canvas", 200, 50);
+
+
+
+
+	</script>
+
+  </body>
+</html>

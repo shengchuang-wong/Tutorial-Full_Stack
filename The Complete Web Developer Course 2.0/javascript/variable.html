@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variable</title>
+</head>
+<body>
+
+	<input type="text" id="textInput">
+
+	<button id="textChanger">Change the text!</button>
+
+	<p id="textParagraph">This is some text</p>
+
+	<script type="text/javascript">
+		
+		var textChanger = document.getElementById("textChanger");
+
+		textChanger.onclick = function() {
+			var textEntered = document.getElementById("textInput").value;
+			document.getElementById("textParagraph").innerHTML = textEntered;
+		}
+
+	</script>
+
+</body>
+</html>

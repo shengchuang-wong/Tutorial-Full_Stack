@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Looping Read Array Value</title>
+</head>
+<body>
+
+	<div id="tweetDiv"></div>
+
+	<script type="text/javascript">
+		
+		var myString = "";
+
+		var myArray = ["Hi", "I like MYSELF", "i guess so"];
+
+		for (var i = 0; i < myArray.length; i++) {
+			myString = myString + "<p>" + myArray[i] + "</p>";
+		}
+
+		document.getElementById("tweetDiv").innerHTML = myString;
+
+	</script>
+
+</body>
+</html>

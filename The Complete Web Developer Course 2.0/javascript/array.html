@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+
+	<h2>View Source Code for More</h2>
+	
+	<script type="text/javascript">
+		var myArray = new Array();
+
+		myArray = [1, 2];
+
+		// add new item into the array
+		var isAdded = myArray.push(3);
+
+		// delete item in the index 1
+		myArray.splice(1, 1);
+
+		// add item into front of index 1
+		myArray.splice(1, 0, "Added")
+
+		// replace item in the index 1
+		myArray.splice(1, 1, "Replaced")
+
+		console.log(myArray);
+	</script>
+
+</body>
+</html>

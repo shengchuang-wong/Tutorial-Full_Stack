@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<title>Video & Audio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  </head>
+  <body>
+
+	<!-- autoplay -->
+	<video width="580" height="400" controls="" id="video">
+		
+		<source src="01.mp4" type="video/mp4">
+			Please upgrade your browser!
+	</video>
+
+	<br>
+	<button id="play">Play</button>
+	<button id="pause">Pause</button>
+
+	Toggle Button > <button id="toggle">Toggle</button>
+
+	<br>
+	<br>
+
+	<audio controls="" autoplay="autoplay">
+		<source src="Arrietty_song.mp3" type="audio/mpeg">
+		Please upgrade your browser!
+	</audio>
+
+	<!-- html5 actually no need to specific script type -->
+	<script type="text/javascript">
+	
+			document.getElementById("play").onclick = function() {
+				document.getElementById("video").play();
+			}
+
+			document.getElementById("pause").onclick = function() {
+				document.getElementById("video").pause();
+			}
+
+			document.getElementById("toggle").onclick = function() {
+				if (document.getElementById("video").paused) {
+					document.getElementById("video").play()
+					this.innerHTML = "Pause";
+				} else {
+					document.getElementById("video").pause();
+					this.innerHTML = "Play";
+				}
+			}
+
+	</script>
+
+  </body>
+</html>

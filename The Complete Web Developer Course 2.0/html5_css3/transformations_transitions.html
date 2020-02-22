@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<title>Transformations & Transitions</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	<style type="text/css">
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			border-radius: 10px;
+			/* linear, ease-in, ease-out*/
+			transition: 1s ease-in-out;
+			margin: 0 auto;
+
+			/* set text into the center*/
+			font-family: "Arial";
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 200%;
+		}
+
+		#box1:hover {
+			/* from left, from top */
+			transform: translate(50px, 50px);
+		}
+
+		#box2:hover {
+			transform: rotate(40deg);
+		}
+
+		#box3:hover {
+			/*horizontally, vetically*/
+			transform: scale(2, 2);
+		}
+
+		#box4:hover {
+			transform: skew(20deg, 30deg);
+		}
+
+		#box5:hover {
+			transform: rotateX(180deg);
+		}
+	</style>
+
+  </head>
+  <body>
+
+	<br>
+	<div id="box1" class="box"></div>
+	<br><br><br>
+	<div id="box2" class="box"></div>
+	<br><br><br>
+	<div id="box3" class="box"></div>
+	<br><br><br>
+	<div id="box4" class="box"></div>
+	<br><br><br>
+	<div id="box5" class="box">Box</div>
+  </body>
+</html>

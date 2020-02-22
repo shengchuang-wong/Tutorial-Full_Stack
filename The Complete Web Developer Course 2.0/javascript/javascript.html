@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<style type="text/css">
+
+		#myDiv {
+			background-color: blue;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			transition: 2s all;
+		}
+
+		#myDiv:hover {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<p id="text">Hello World!</p>
+
+	<button id="myButton">Change text</button>
+
+	<p id="secondParagraph">Javascript is ...</p>
+
+	<button id="secondButton">Append text</button>
+
+	<p id="moreText">This is some text</p>
+
+	<button id="styleText">Style Text</button>
+
+	<br />
+	<br />
+	<div id="myDiv"></div>
+
+	<script type="text/javascript">
+		
+		document.getElementById("myButton").onclick = function() {
+			document.getElementById("text").innerHTML = "Clicked";
+		}
+
+		document.getElementById("secondButton").onclick = function() {
+			document.getElementById("secondParagraph").innerHTML += "awesome";}
+
+		document.getElementById("styleText").onclick = function() {
+			document.getElementById("moreText").style.color = "lightblue";
+			document.getElementById("moreText").style.fontSize = "20px";
+		}
+
+		document.getElementById("myDiv").onclick = function() {
+			document.getElementById("myDiv").style.display = "none";
+		}
+
+	</script>
+
+</body>
+</html>

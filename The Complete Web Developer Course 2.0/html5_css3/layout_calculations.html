@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<title>Layout & Calculations</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	<style type="text/css">
+		#multi-column {
+			column-count: 3;
+			
+			column-gap: 5px;
+
+			column-rule-style: solid;
+
+			column-rule-width: 1px;
+
+			column-rule-color: grey;
+
+		}
+
+		h2 {
+			column-span: all;
+		}
+
+		header {
+			width: 100%;
+			height: 50px;
+			background-color: grey;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.container {
+			width: 100%;
+			background-color: yellow;
+			height: calc(100% - 50px);
+			position: absolute;
+		}
+
+		.flexbox-container {
+			display: flex;
+			width: 100%;
+			height: 200px;
+			background-color: aqua;
+			/*flex-direction: row-reverse;
+			flex-direction: column;*/
+			flex-wrap: wrap;
+		}
+
+		.flexbox-item {
+			background-color: bisque;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			box-sizing: border-box;
+		}
+	</style>
+
+  </head>
+  <body>
+
+	<header></header>
+
+	<div class="container">
+		<div class="flexbox-container">
+			<div class="flexbox-item">Item 1</div>
+			<div class="flexbox-item" style="border: 5px solid grey; padding: 10px">Item 2</div>
+			<div class="flexbox-item">Item 3</div>
+			<div class="flexbox-item">Item 4</div>
+			<div class="flexbox-item">Item 5</div>
+			<div class="flexbox-item">Item 6</div>
+		</div>
+	</div>
+
+    <div id="multi-column">
+    	<h2>News For Nerds</h2>
+    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse neque est similique aspernatur ea corporis aliquid sunt eius quas quos dolore atque ipsa voluptatum, inventore voluptates voluptas sed eaque quod?<br><br>
+
+    	Quod totam magni placeat a est, voluptates earum fugiat possimus, accusamus dolorum quidem quasi commodi dolores facilis, hic dicta cum eveniet! Eveniet nihil blanditiis necessitatibus labore corrupti molestiae optio temporibus.<br><br>
+
+    	Hic, odio enim dolorum dolore molestias magni, facilis, reiciendis id accusamus aliquid delectus necessitatibus vel. Suscipit cum, aspernatur libero quisquam culpa, quae omnis officiis ipsa possimus ratione magni, magnam. Sapiente!<br><br>
+    </div>
+    
+  </body>
+</html>

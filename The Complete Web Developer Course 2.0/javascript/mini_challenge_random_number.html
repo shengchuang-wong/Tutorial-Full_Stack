@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How many fingers</title>
+</head>
+<body>
+	
+	<p>How many fingers am I holding up?</p>
+
+	<p><input type="number" min="0" max="5" id="guess"><button id="checkGuess">Guess!</button></p>
+
+	<script type="text/javascript">
+
+		//generate random number between 0 - 10
+		//alert(Math.floor(Math.random() * 11));
+
+
+		var inputBtn = document.getElementById("checkGuess");
+
+		inputBtn.onclick = function() {
+
+			var inputNum = document.getElementById("guess").value;
+
+			if(inputNum == null || inputNum == "") {
+				alert("Empty Field");
+			} else {
+
+				var randomNum = Math.floor(Math.random() * 6);
+
+				var message = " ~ The answer was " + randomNum;
+
+				if (inputNum != randomNum) {
+					alert("Wrong" + message);
+				} else {
+					alert("Correct" + message);
+				}
+			
+			}
+		}
+	</script>
+
+</body>
+</html>

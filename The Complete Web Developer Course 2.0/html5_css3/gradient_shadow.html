@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<title>Gradient & Shadow</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	<style type="text/css">
+		#gradient {
+			width: 500px;
+			height: 200px;
+			background-color: blue;
+			background: linear-gradient(white, blue);
+		}
+
+		#gradient1 {
+			width: 500px;
+			height: 200px;
+			background-color: blue;
+			background: linear-gradient(to right, white, blue);
+		}
+
+		#gradient2 {
+			width: 500px;
+			height: 200px;
+			background-color: blue;
+			background: linear-gradient(to bottom right, white, blue, white, blue);
+		}
+
+		#gradient3 {
+			width: 500px;
+			height: 200px;
+			background-color: blue;
+			background: radial-gradient(white, blue);
+		}
+	
+		h2 {
+			/* right bottom blur color*/
+			text-shadow: 2px 2px 4px blue;
+			color: white;
+		}
+
+		h3 {
+			/* right bottom blur color*/
+			text-shadow: 0 0 5px red;		
+		}
+
+		h2:last-child {
+			/* right bottom blur color*/
+			text-shadow: 0 0 5px red, -5px -5px 4px green;		
+		}
+
+		#shadow {
+			width: 200px;
+			height: 200px;
+			/* right bottom blur color*/
+			box-shadow: 3px 3px 3px grey;
+			background-color: antiquewhite;
+		}
+		
+	</style>
+
+  </head>
+  <body>
+
+	<div id="gradient"><h1>This is a gradient</h1></div>
+	<br>
+	<div id="gradient1"><h1>Left to Right</h1></div>
+	<br>
+	<div id="gradient2"><h1>Top Left to Bottom Right (more colors)</h1></div>
+	<br>
+	<div id="gradient3"><h1>Radial Gradient</h1></div>
+	<br>
+	<h2>This text will have a shadow at right bottom</h2>
+	<br>
+	<h3>This text will have a shadow at behind</h3>
+	<br>
+	<h2>This text will have a shadow at top left (multiple shadows)</h2>
+	<br>
+	<div id="shadow">Box shadow</div>
+  </body>
+</html>

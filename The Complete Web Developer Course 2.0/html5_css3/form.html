@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<title>Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  </head>
+  <body>
+
+	<form id="myForm" acction="processform.php">
+		
+		<fieldset>
+		<legend>Form</legend>
+
+		<p>Placeholder: <input type="text" placeholder="I am placeholder..."></p>
+	
+		
+		<p>Autofocus: <input type="text" autofocus="autofocus"></p>
+		<!-- For html5, can just put autofocus instead of autofocus="autofocus" -->
+	
+		
+		<p>Autocomplete Off: <input type="text" autocomplete="off"></p>
+
+	
+		<p>Required: <input type="text" required="required"></p>
+
+		
+		<p>Email: <input type="email"></p>
+
+		<p>Pattern(0-9): <input type="text" pattern="[0-9]" title="allow only digit"></p>
+
+			<!-- select is to degrade the error that not support for datalist -->
+			<datalist id="names">
+				<select>
+					<option value="Rob">Rob</option>
+					<option value="Kristen">Kristen</option>
+					<option value="Tommy">Tommy</option>
+					<option value="Ralphie">Ralphie</option>
+				</select>
+			</datalist>
+			
+
+		<p>Autocomplete: <input type="text" list="names"></p>
+
+		<p>Multiple file upload: <input type="file" multiple="multiple"></p>
+
+		<p><input type="submit" value="Submit To This Form"></p>
+			
+		The submit button have its form action which does not follow the form action of the form, this help multiple button within the same form act differently (Method can also be set "formmethod=''")
+		<p><input type="submit" value="Submit to processform2.php" formaction="processform2.php"></p>
+
+		</fieldset>
+
+	</form>
+
+	<p>Input that place outisde of the form: <input type="text" form="myForm" required="required"></p>
+
+  </body>
+</html>
